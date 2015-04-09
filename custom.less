@@ -1,0 +1,260 @@
+/*------ Modules --------*/
+
+// Layout
+.tm-nav{
+	z-index:500;
+	@media (min-width: @breakpoint-medium) {
+		.uk-navbar{
+			padding: 30px 0;	
+			background: none;
+		}
+		#tm-logo-big{
+			max-width:250px;
+		}
+	}
+	@media (min-width: @breakpoint-large) {
+		.uk-navbar{
+			padding: 30px 0 30px 5vw;	
+			background: none;
+		}
+		#tm-logo-big{
+			max-width:none;
+		}
+	}
+
+	.tm-social{
+		@media (min-width: @breakpoint-medium) {
+		}
+		@media (min-width: @breakpoint-large) {
+			margin-left: 34vw;
+		}
+	}
+}
+// TODO : replace hard slide blue bg by secret sauce
+.tm-top-a{
+	.uk-slideshow{
+		li{
+			height:70vh;
+		}
+		&-cta{
+			position: absolute;
+			bottom:50px;
+			left:0;
+			width:100%;
+		}
+		button{
+			border:3px solid;
+			@media (min-width: @breakpoint-medium) {
+
+			}
+			@media (min-width: @breakpoint-large) {
+				min-width: 612px;
+				min-height:66px;
+				width: 32vw;
+				height: 5vh;
+			}
+		}
+		&-content{
+				
+		}
+		&-image{
+			z-index: 100;	
+		}
+		&-background{
+			z-index: 9;				
+		}
+	}
+	.uk-dotnav > *{
+		padding-left: 6px;
+	}
+}
+
+.tm-bottom-a{
+	@media (min-width: @breakpoint-medium) {
+		padding: @global-grid-gutter-large;
+	}
+}
+
+.tm-module{
+	margin-top: @global-grid-gutter-large;
+	@media (min-width: @breakpoint-medium) {
+		margin-top: 0;
+	}
+	a{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+.tm-footer{
+	@media (max-width: @breakpoint-medium) {
+		.uk-subnav{
+			text-align: center;
+			li {
+				width:100%;
+				&:before {
+					content:none;
+				}
+			}
+		}
+	}
+
+	@media (min-width: @breakpoint-medium) {
+		.uk-subnav{
+			float : right;
+		}
+	}
+}
+
+.tm-module{
+	@media (min-width: @breakpoint-medium) {
+		p{
+
+		}
+	}
+
+	@media (min-width: @breakpoint-large) {
+		p{
+			font-size:20px;
+		}
+	}
+}
+
+.tm-footer{
+	padding-right: @global-grid-gutter-large;
+}
+
+// Typography 
+
+.tm-top-a{
+	.uk-slideshow{
+		h2{
+			text-transform: uppercase;
+			font-family: "ProximaBoldIt", Helvetica, Arial, sans-serif;
+			font-style: italic;
+		}
+		p{
+			font-family: "ProximaLightIt", Helvetica, Arial, sans-serif;
+			font-style: italic;
+		}
+		.phone{
+			font-family: "Proximareg", Helvetica, Arial, sans-serif;
+			font-style: normal;
+			font-size: 2em;
+		}
+		button{
+			text-transform: uppercase;
+		}
+		@media (min-width: @breakpoint-large) {
+			h2{
+				font-size:6vh;
+				line-height: 7vh;
+			}
+			p{
+
+				font-size: 3.5vh;
+				line-height: 4vh;
+			}
+			.phone{
+				font-size: 8vh;
+				line-height: 10vh;
+			}
+			button{
+				font-size: 2vh;
+			}
+		}	
+	}
+}
+
+.tm-footer{
+	.uk-subnav-line{
+		a{
+			@media (min-width: @breakpoint-large) {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+// TODO : replace hard bg by overlay
+// TODO : use flex component for alignement
+.tm-module{
+
+	img:after{
+		content:'';
+		position: absolute;
+		top:0;
+		bottom: 0;
+		left: 0;
+		right:0;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	p{
+			color:@global-color;
+	}
+}
+
+// Style 
+.tm-nav{
+	.uk-navbar{
+		background-color: #4d6fba;
+		@media (min-width: @breakpoint-medium) {
+			background: none;
+		}
+	}
+
+}
+.tm-top-a{
+	box-shadow: 0px 0px 10px 0px #656565;
+	.uk-slideshow{
+		.uk-overlay-panel{
+			color:@global-color;
+			
+			@media (min-width: @breakpoint-medium) {
+				background:none;
+			}
+		}
+		button{
+			color:@global-color;
+			background:none;
+			border-color:@global-warning-background;
+			color:@global-color;
+			&:hover{
+				background-color: @global-warning-background;
+			}
+		}
+		&-background{
+			position: absolute;
+			top:0;
+			width: 50vw; 
+			height: 0; 
+			border-right: 20vw solid transparent;
+  			border-top: 75vh solid #5273bc;
+		}
+		.uk-cover-background{
+			background-position: 100% 50%;
+		}
+	}
+}
+
+
+.tm-footer{
+	box-shadow:0px -5px 10px 0px rgba(0,0,0,0.1);
+	.uk-subnav-line{
+		&> :nth-child(n+2):before{
+			border-color:#4d6fba;
+		}
+		a{
+			color:@global-contrast-color;
+		}
+	}
+}
+
+.tm-social{
+	a:hover{
+		opacity: 0.8;
+	}
+}
