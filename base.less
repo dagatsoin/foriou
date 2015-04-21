@@ -34,6 +34,7 @@
 @base-h6-font-size:                             round((@global-font-size * 0.85)); // 12px / 14px
 @base-h6-line-height:                           round((@base-h6-font-size * 1.46)); // 18px / 20px
 
+@base-em-color:                                 @global-hilight-color;
 @base-hr-border:                                @global-border;
 
 @base-blockquote-border:                        @global-border;
@@ -123,4 +124,8 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-base-misc() {}
+.hook-base-misc() {
+    strong{
+        font-family: ProximaBoldIt;
+    }
+}

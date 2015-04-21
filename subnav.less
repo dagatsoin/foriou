@@ -55,4 +55,52 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-subnav-misc() {}
+.hook-subnav-misc() {
+
+	.tm-footer{
+	// ---------- LAYOUT ----------
+
+		@media (min-width: @breakpoint-medium) {
+			.uk-subnav{
+				float : right;
+			}
+		}
+
+		@media (max-width: @breakpoint-medium){
+			.uk-subnav li {
+				width:100%;
+				&:before {
+					content:none;
+				}
+			}
+		}
+
+
+	// ---------- TYPO ----------
+
+
+		@media (max-width: @breakpoint-medium){
+			.uk-subnav{
+				text-align: center;
+			}
+		}
+
+		@media (min-width: @breakpoint-large) {
+			.uk-subnav-line a{
+				font-size: 18px;
+			}
+		}
+
+	// ---------- STYLE ----------
+
+		.uk-subnav-line{
+
+			&> :nth-child(n+2):before{
+				border-color:#4d6fba;
+			}
+			a{
+				color:@global-color;
+			}
+		}
+	}
+}

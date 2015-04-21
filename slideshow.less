@@ -1,0 +1,143 @@
+//
+// Component: Slideshow
+//
+// ========================================================================
+@import "../../src/less/components/slideshow.less";
+
+// Variables
+// ========================================================================
+
+
+// Component
+// ========================================================================
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-slideshow-misc() {
+	.uk-slideshow {
+	// ---------- LAYOUT ----------
+		li{
+			height:70vh;
+		}
+		&-cta{
+			position: absolute;
+			bottom:7vh;
+			left:0;
+			width:100%;
+		}
+		button{
+			border:3px solid;
+			@media (min-width: @breakpoint-medium) {
+
+			}
+			@media (min-width: @breakpoint-large) {
+				
+				min-height:66px;
+				width: 29vw;
+				height: 5vh;
+			}
+		}
+		&-content{
+				
+		}
+		&-image{
+			z-index: 100;	
+		}
+		&-background{
+			z-index: 9;				
+		}
+	
+	// ---------- TYPO ----------
+		h2{
+			text-transform: uppercase;
+			font-family: "ProximaBoldIt", Helvetica, Arial, sans-serif;
+			font-style: italic;
+		}
+		p{
+			font-family: "ProximaLightIt", Helvetica, Arial, sans-serif;
+			font-style: italic;
+		}
+		.phone{
+			font-family: "ProximaLight", Helvetica, Arial, sans-serif;
+			font-style: normal;
+			font-size: 2em;
+		}
+		button{
+			text-transform: uppercase;
+		}
+		@media (min-width: @breakpoint-medium) {
+			h2{
+				font-size:4vh;
+				line-height: 7vh;
+			}
+			p{
+
+				font-size: 3vh;
+				line-height: 4vh;
+			}
+			.phone{
+				font-size: 6vh;
+				line-height: 7vh;
+			}
+			button{
+				font-size: 2vh;
+			}
+			@media (max-aspect-ratio: 1/1){
+				h2{
+					font-size:5vh;
+					line-height: 7vh;
+				}
+			}
+		}	
+		@media (min-width: @breakpoint-large) {
+			h2{
+				font-size:6vh;
+				line-height: 7vh;
+			}
+			p{
+
+				font-size: 3vh;
+				line-height: 4vh;
+			}
+			.phone{
+				font-size: 6vh;
+				line-height: 7vh;
+			}
+			button{
+				font-size: 2vh;
+			}
+		}	
+
+	// ---------- STYLE ----------
+		color:@global-contrast-color;
+		h2,p{
+			color:@global-contrast-color;
+		}
+		button{
+			background:none;
+			border-color:@global-hilight-color;
+			&:hover{
+				background-color: @global-hilight-color;
+			}
+		}
+		&-background{
+			position: absolute;
+			top:0;
+			width: 50vw; 
+			height: 0; 
+			border-right: 20vw solid transparent;
+  			border-top: 75vh solid #5273bc;
+		}
+		.uk-cover-background{
+			background-position: 100% 50%;
+		}
+
+		@media (min-width: @breakpoint-medium) and (min-aspect-ratio: 1/1){
+			.uk-overlay-panel{
+				background:none;
+			}
+		}
+	}
+}

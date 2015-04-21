@@ -30,7 +30,27 @@
 // Component
 // ========================================================================
 
-.hook-navbar() {}
+.hook-navbar() {
+	// ---------- LAYOUT ----------
+	z-index:500;
+	@media (min-width: @breakpoint-medium) {
+		padding: 30px 0;	
+		background: none;
+	}
+	@media (min-width: @breakpoint-large) {
+		padding: 30px 0 30px 5vw;	
+		background: none;
+	}
+	// ---------- TYPO ----------
+
+
+	// ---------- STYLE ----------
+
+	background-color: #1e2e5f;
+	@media (min-width: @breakpoint-medium) {
+		background: none;
+	}
+}
 
 
 // Sub-object: `uk-navbar-nav`
