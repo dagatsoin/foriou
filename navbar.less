@@ -7,12 +7,14 @@
 // Variables
 // ========================================================================
 
-@navbar-color:                                  @global-color;
+@navbar-background:                             @global-color;
+
+@navbar-color:                                  @global-contrast-color;
 @navbar-link-color:                             @global-link-color;
 @navbar-link-hover-color:                       @global-link-hover-color;
 
 @navbar-nav-line-height:                        @navbar-nav-height;
-@navbar-nav-color:                              @global-color;
+@navbar-nav-color:                              @global-contrast-color;
 @navbar-nav-font-size:                          @global-font-size;
 @navbar-nav-hover-color:                        @global-color;
 @navbar-nav-onclick-color:                      @global-color;
@@ -31,24 +33,49 @@
 // ========================================================================
 
 .hook-navbar() {
+	position: relative;
+	width: 100%;
 	// ---------- LAYOUT ----------
-	z-index:500;
-	@media (min-width: @breakpoint-medium) {
-		padding: 30px 0;	
-		background: none;
+/*	@media (min-width: @breakpoint-medium) {
+		margin: @global-grid-gutter @global-grid-gutter*2 !important;	
 	}
 	@media (min-width: @breakpoint-large) {
-		padding: 30px 0 30px 5vw;	
-		background: none;
+		margin: @global-grid-gutter-large 5vw !important;	
+	}*/
+	&-fixed{
+		position: absolute;
+		z-index:500;
+		height: auto;
 	}
-	// ---------- TYPO ----------
+	/*.tm-page-title{
+		position: absolute;
+		width: 100%;
+		h1{
+			display: inline;
+		}
+	}*/
 
+	// ---------- TYPO ----------
+	.tm-page-title{
+		text-align: center;
+		h1{
+			text-transform: uppercase;
+			@media (min-width: @breakpoint-medium) {
+				font-size:@base-h3-font-size;
+			}
+			@media (min-width: @breakpoint-xlarge) {
+				font-size:4vh;
+			}
+		}
+	}
 
 	// ---------- STYLE ----------
+	&-transparent{
+		background: none;		
+	}
 
-	background-color: #1e2e5f;
-	@media (min-width: @breakpoint-medium) {
-		background: none;
+	.tm-page-title h1{
+		color: @global-contrast-color;
 	}
 }
 
@@ -56,7 +83,16 @@
 // Sub-object: `uk-navbar-nav`
 // ========================================================================
 
-.hook-navbar-nav() {}
+.hook-navbar-nav() {
+	@media (min-width: @breakpoint-medium) {
+		height: 60px;
+		line-height: 60px;
+	}
+	@media (min-width: @breakpoint-large) {
+		height: 110px;
+		line-height: 110px;
+	}
+}
 
 // Hover
 .hook-navbar-nav-hover() {}
@@ -71,7 +107,16 @@
 // Sub-object: `uk-navbar-content`
 // ========================================================================
 
-.hook-navbar-content() {}
+.hook-navbar-content() {
+	@media (min-width: @breakpoint-medium) {
+		height: 60px;
+		line-height: 60px;
+	}
+	@media (min-width: @breakpoint-large) {
+		height: 110px;
+		line-height: 110px;
+	}
+}
 
 
 // Miscellaneous

@@ -12,9 +12,19 @@
 @panel-title-line-height:                       round((@panel-title-font-size * 1.32)); // 24px / 26px
 @panel-title-color:                             @global-color;
 
-@panel-box-padding:                             @global-margin;
+@panel-box-padding:                             @global-grid-gutter;
 @panel-box-color:                               @global-color;
 @panel-box-title-color:                         @global-color;
+
+@panel-box-primary-background:                  @global-primary-background;
+@panel-box-primary-color:                       @global-primary-color;
+@panel-box-primary-hover-color:                 @panel-box-primary-color;
+@panel-box-primary-title-color:                 @global-primary-title-color;
+
+@panel-box-secondary-background:                @global-secondary-background;
+@panel-box-secondary-color:                     @global-secondary-color;
+@panel-box-secondary-hover-color:               @panel-box-secondary-color;
+@panel-box-secondary-title-color:               @global-secondary-title-color;
 
 @panel-hover-padding:                           @global-margin;
 @panel-hover-color:                             @global-color;
@@ -31,7 +41,9 @@
 // Sub-object: `uk-panel-title`
 // ========================================================================
 
-.hook-panel-title() {}
+.hook-panel-title() {
+	text-transform: @base-heading-text-transform;
+}
 
 
 // Sub-object: `uk-panel-badge`

@@ -60,12 +60,6 @@
 	.tm-footer{
 	// ---------- LAYOUT ----------
 
-		@media (min-width: @breakpoint-medium) {
-			.uk-subnav{
-				float : right;
-			}
-		}
-
 		@media (max-width: @breakpoint-medium){
 			.uk-subnav li {
 				width:100%;
@@ -78,7 +72,9 @@
 
 	// ---------- TYPO ----------
 
-
+		font-family: ProximaNovaLight;
+		font-size: 15px;
+		line-height: 27px;
 		@media (max-width: @breakpoint-medium){
 			.uk-subnav{
 				text-align: center;
@@ -100,6 +96,15 @@
 			}
 			a{
 				color:@global-color;
+			}
+		}
+		&.tm-block-secondary .uk-subnav-line{
+
+			&> :nth-child(n+2):before{
+				border-color:@global-secondary-color;
+			}
+			a{
+				color:@global-secondary-color;
 			}
 		}
 	}

@@ -42,4 +42,23 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-icon-misc() {}
+.hook-icon-misc() {
+	.uk-icon-phone-foriou:before{
+		content:'';
+		display: block;
+		background: url(../images/ico-phone.svg);
+  		background-size: 15px 15px;
+		width: 15px;
+		height: 15px;
+		@media (min-width: @breakpoint-large){
+			width: @base-h1-font-size;
+			height: @base-h1-font-size;
+			background-size: @base-h1-font-size @base-h1-font-size;
+		}
+		@media (min-width: @breakpoint-xlarge){
+			width: 30px;
+			height: 30px;
+			background-size: 30px 30px;
+		}
+	}
+}

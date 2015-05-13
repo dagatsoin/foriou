@@ -14,7 +14,7 @@
 @breakpoint-small:                              480px;
 @breakpoint-medium:                             768px;
 @breakpoint-large:                              1220px;
-@breakpoint-xlarge:                             1600px;
+@breakpoint-xlarge:                             1920px;
 @breakpoint-mini-max:                           (@breakpoint-small - 1);
 @breakpoint-small-max:                          (@breakpoint-medium - 1);
 @breakpoint-medium-max:                         (@breakpoint-large - 1);
@@ -25,7 +25,7 @@
 // Text
 //
 
-@global-color:                                  #000;
+@global-color:                                  #002463;
 @global-muted-color:                            #999;
 
 @global-link-color:                             #07D;
@@ -34,7 +34,7 @@
 @global-contrast-color:                         #fff;
 @global-hilight-color: 		 					#faca0c;
 
-@global-font-size:                              14px;
+@global-font-size:                              18px;
 @global-line-height:                            20px;
 
 //
@@ -42,9 +42,18 @@
 //
 
 @global-background:                             #fff;
-@global-border:                                 #ddd;
+@global-border:                                 @global-color;
 
-@global-primary-background:                     #00a8e6;
+@global-primary-background:                     fade(@global-color, 10%);
+@global-primary-color:        	                @global-color;
+@global-primary-hover-color:                 	@global-primary-color;
+@global-primary-title-color:                 	@global-color;
+
+@global-secondary-background:                	@global-color;
+@global-secondary-color:                     	#fff;
+@global-secondary-hover-color:               	@global-secondary-color;
+@global-secondary-title-color:               	#fff;
+
 @global-success-background:                     #8cc14c;
 @global-warning-background:                     #faca0c;
 @global-danger-background:                      #da314b;
@@ -53,10 +62,11 @@
 // Spacings
 //
 
-@global-margin:                                 15px;
+@global-margin:                                 20px;
 @global-margin-large:                           25px;
-@global-grid-gutter:                            25px;
-@global-grid-gutter-large:                      35px;
+@global-grid-gutter:                            12px;
+@global-grid-gutter-large:                      30px;
+@global-grid-gutter-xlarge:                     64px;
 
 //
 // Controls
@@ -76,5 +86,6 @@
 //
 // Utility value
 //
-
 @utility-border-rounded:                        2px;
+@utility-container-large:                       960px;
+@utility-container-xlarge:                      90%;

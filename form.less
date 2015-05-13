@@ -17,7 +17,7 @@
 @form-disabled-border:                          @global-border;
 @form-disabled-color:                           @global-muted-color;
 
-@form-placeholder-color:                        @global-muted-color;
+@form-placeholder-color:                        @global-color;
 
 @form-gutter:                                   @global-margin;
 
@@ -39,7 +39,9 @@
 // Component
 // ========================================================================
 
-.hook-form() {}
+.hook-form() {
+
+}
 
 // Focus state
 .hook-form-focus() {}
@@ -86,4 +88,33 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-form-misc() {}
+.hook-form-misc() {
+
+	// ---------- LAYOUT ----------
+	.uk-form input[type="text"],
+	.uk-form input[type="password"],
+	.uk-form input[type="email"]{
+		border-top: none;
+		border-right: none;
+		border-left: none;
+	}
+	
+	.uk-form .uk-form-help-block.uk-align-left,
+	.uk-form .uk-form-help-block.uk-align-right,
+	.uk-form .uk-button.uk-align-left,
+	.uk-form .uk-button.uk-align-right{
+		margin: 0;
+	}
+
+	// ---------- TYPO ----------
+	.uk-form-help-block{
+		@media (min-width: @breakpoint-large){
+			font-size: 10px;
+		}
+	}
+
+	// ---------- STYLE ----------	
+	textarea{
+		background-color:@global-primary-background !important;
+	}
+}

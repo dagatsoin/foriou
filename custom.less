@@ -1,79 +1,213 @@
 // ---------- LAYOUT ----------
 
+.tm-block{
+	@media (min-width: @breakpoint-medium) {
+		padding:@global-margin 0;
+	}
+	@media (min-width: @breakpoint-large) {
+		padding:@global-margin*2 0;
+	}
+}
 
 .tm-nav{
-	z-index:500;
+
 	@media (min-width: @breakpoint-medium) {
 		#tm-logo-big{
 			max-width:250px;
 		}
 	}
 	@media (min-width: @breakpoint-large) {
-		
+	padding:0;
+
 		#tm-logo-big{
 			max-width:none;
 		}
 	}
+	.tm-social{
+		a{
+			display: inline-block;
+			width: 45px;
+			height: 45px;
+			margin-left: 1.4vw;
+		}
+	}
+}
 
+
+
+.tm-page-home{
 	.tm-social{
 		a{
 			margin-left: 1.4vw;
 		}
 		@media (min-width: @breakpoint-medium) {
-			margin-left: 10vw;
+			margin-right: 248px;
 		}
 		@media (min-width: @breakpoint-large) {
-			margin-left: 34vw;
+			margin-right: 330px;
+		}
+	}
+	#tm-modal-login{
+		@media (min-width: @breakpoint-large) {
+			.uk-modal-dialog{
+				width:821px;
+				.uk-form-row{
+					&:first-child{
+						margin-top: @global-grid-gutter-xlarge;
+					}
+					margin-bottom: @global-grid-gutter-xlarge;
+				}
+			}
+			.uk-modal-content{
+				margin-right: @global-grid-gutter-xlarge *2;
+				margin-left: @global-grid-gutter-xlarge *2;
+			}
+		}
+	}
+}
+
+.tm-page-contact{
+	.tm-top-a{
+		padding-top:@global-margin; 
+	}
+	.tm-content{
+		padding-top: @global-margin;
+		@media (min-width: @breakpoint-medium) {
+			padding-top: @global-margin*4;
+		}
+	}
+}
+
+.tm-page-faq{
+	.tm-top-a{
+		padding:@global-margin 0; 
+	}
+	.tm-content{
+		min-height: 400px;
+		.uk-accordion{
+			height:auto;
+			@media (min-width: @breakpoint-medium) {
+				max-height: 327px;
+			}
+		}
+	}
+	.tm-banner{
+		@media (min-width: @breakpoint-medium) {
+			.tm-phone{
+				position: absolute;
+				left: 25%;
+			}
 		}
 	}
 }
 
 // TODO : replace hard slide blue bg by secret sauce
+.tm-page-home{
+	.tm-bottom-a{
+		@media (min-width: @breakpoint-medium){
+			padding: @global-grid-gutter;
+		}
+		.tm-module{
+			margin-top: @global-grid-gutter;
 
-.tm-bottom-a{
-	@media (min-width: @breakpoint-medium){
-		padding: @global-grid-gutter-large;
-	}
-	.tm-module{
-		margin-top: @global-grid-gutter-large;
-
-		@media (min-width: @breakpoint-medium) and (max-aspect-ratio:1/1) {
-			width:50%;
-		}
-		@media (min-width: @breakpoint-medium) and (min-aspect-ratio:1/1) {
-			margin-top: 0;
-		}
-		a{
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-		}
-		figcaption img{
-			@media (min-width: @breakpoint-medium) and (min-aspect-ratio:1/1) and (max-width: @breakpoint-large){
-				max-height: 40px;
+			@media (min-width: @breakpoint-medium) and (max-aspect-ratio:1/1) {
+				width:50%;
 			}
-			
-		}
-		.uk-overlay-panel{
-			padding-left: 50px;//fix content offset
+			@media (min-width: @breakpoint-medium) and (min-aspect-ratio:1/1) {
+				margin-top: 0;
+			}
+			a{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+			figcaption img{
+				@media (min-width: @breakpoint-medium) and (min-aspect-ratio:1/1) and (max-width: @breakpoint-large){
+					max-height: 40px;
+				}
+				
+			}
+			.uk-overlay-panel{
+				padding-left: 50px;//fix content offset
+			}
 		}
 	}
 }
 
-.tm-footer{
-	padding-right: @global-grid-gutter-large;
+
+.tm-banner{
+	height: auto;
+	padding:@global-margin/2 0;
+	@media (min-width: @breakpoint-medium){
+		height: 108px;
+		padding:@global-margin/2;
+		@media (max-aspect-ratio:1/1){
+		
+		}
+	}
+	@media (min-width: @breakpoint-large){
+		
+	}
+
+	.uk-panel-title,
+	p{
+		margin: 0;
+	}
+
+	&-bg{
+		//margin: -@global-margin; 
+	}
+}
+
+.tm-button-back {
+	position:absolute;
+	@media (min-width: @breakpoint-medium){
+		width: 50px;
+		height: 50px;
+		left: @global-margin;
+		top: -100px;
+	}
+	@media (min-width: @breakpoint-large){
+		width: 67px;
+		height: 67px;
+		left: 5vw;
+		top: -100px;
+	}
+	@media (max-aspect-ratio:1/1){
+		display: none;
+	}
+}
+
+.tm-page-contact{
+	.tm-phone{
+		display: block;
+		padding:@global-margin*0.5 @global-margin; 
+		margin:@global-margin !important;	
+
+		@media (min-width: @breakpoint-medium) {
+			display: inline;
+		}
+		@media (min-width: @breakpoint-large) {
+			margin:0;
+		}
+		@media (min-width: @breakpoint-xlarge) {
+			
+		}
+	}
 }
 
 // ---------- TYPO ----------
 
+
 // TODO : replace hard bg by overlay
 // TODO : use flex component for alignement
 .tm-module{
-
-	font-family: ProximaBold;
+	
+	font-family: ProximaNovaBold;
 	text-transform: uppercase;
+	letter-spacing: 0.1em;
 	@media (min-width: @breakpoint-large) {
 		p{
 			font-size:20px;
@@ -90,19 +224,151 @@
 	}
 }
 
-// ---------- STYLE ----------
 
-.tm-top-a{
-	box-shadow: 0px 0px 10px 0px #656565;
+.tm-page-faq{
+	.tm-phone{
+		font-family: ProximaNovaBold;
+	}
 }
 
 
-.tm-footer{
-	box-shadow:0px -5px 10px 0px rgba(0,0,0,0.1);
+.tm-page-contact{
+	.tm-phone{
+		font-family: ProximaNovaReg;
+		font-size:@base-h3-font-size;
+	  	line-height: 50px;
+		@media (min-width: @breakpoint-large) {
+			font-size:@base-h1-font-size;
+		}
+		@media (min-width: @breakpoint-large) {
+			font-size:50px;
+		}
+	}
+}
+
+.tm-banner{
+	@media (max-width: @breakpoint-small) {
+		text-align:center;
+	}
+}
+// ---------- STYLE ----------
+
+.tm-block{
+	&-primary{
+		background-color: @global-primary-background;
+		color: @global-primary-color;
+		a{
+			&:hover{
+				color:@global-primary-hover-color;
+			}
+		}
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		*[class^='uk-h']{
+			color: @global-primary-title-color;			
+		}
+	}
+
+	&-secondary{
+		background-color: @global-secondary-background;
+		color: @global-secondary-color;
+		a{
+			&:hover{
+				color:@global-secondary-hover-color;
+			}
+		}
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		*[class^='uk-h']{
+			color: @global-secondary-title-color;			
+		}
+	}
+}
+
+.tm-nav{
+	.horizontal-gradient();
+}
+
+.tm-shadow-top{
+	box-shadow:0px -1px 10px 0px rgba(0,0,0,0.45);	
+}
+
+.tm-shadow-bottom{
+	box-shadow: 0px 0px 10px 0px #656565;
 }
 
 .tm-social{
 	a:hover{
-		opacity: 0.8;
+		color: @global-warning-background;
+	}
+	&-fb{
+		background-image: url(../images/ico-fb.png);
+  		&:hover{
+  			background-image: url(../images/ico-fb-over.png);
+  		}
+	}
+	&-gg{
+    	background-image: url(../images/ico-gg.png);
+  		&:hover{
+  			background-image: url(../images/ico-gg-over.png);
+  		}
+	}
+	&-tw{
+		background-image: url(../images/ico-tw.png);
+  		&:hover{
+  			background-image: url(../images/ico-tw-over.png);
+  		}
+	}
+}
+
+.tm-button-back {
+	&:hover{
+		opacity: 0.5;
+	}
+}
+
+.tm-banner{
+	border:thin solid;
+}
+
+.tm-page-home{
+	.tm-footer{
+		.horizontal-gradient();
+	}
+}
+
+.tm-page-faq{
+	.tm-content p{
+		color:black;
+	}
+	.tm-banner-contact.tm-banner-bg{
+		@media (min-width: @breakpoint-medium){
+			background-image:url(../images/bg-bloc-contact.jpg);
+			background-position:bottom right;
+			background-repeat:no-repeat;
+		}
+		
+	}
+	.tm-phone{
+
+	}
+}
+
+.tm-page-contact{
+	.tm-content{
+		@media (min-width: @breakpoint-large){
+			background:url(../images/bg-main-contact.jpg) no-repeat bottom right;
+		}
+	}
+	.tm-phone{
+		background-color: @global-primary-background;
 	}
 }

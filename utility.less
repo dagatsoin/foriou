@@ -6,6 +6,11 @@
 
 // Variables
 // ========================================================================
+@utility-container-max-width:                   830px;
+@utility-container-padding-horizontal:          25px;
+
+@utility-container-large-max-width:             90%;
+@utility-container-large-padding-horizontal:    35px;
 
 @utility-container-padding-horizontal:          @global-grid-gutter;
 @utility-container-large-padding-horizontal:    @global-grid-gutter-large;
@@ -29,7 +34,16 @@
 // Container
 // ========================================================================
 
-.hook-container() {}
+.hook-container() {
+	@media(min-width:@breakpoint-large){
+		&-large{
+			max-width:@utility-container-large !important;
+		}
+		&-xlarge{
+			max-width:@utility-container-xlarge !important;
+		}
+	}
+}
 
 
 // Scrollable

@@ -21,6 +21,7 @@
 @button-small-font-size:                        round((@global-font-size * 0.85)); // 12px / 14px
 @button-large-font-size:                        round((@global-font-size * 1.14)); // 16px / 18px
 
+@button-background:                             @global-primary-background;
 @button-color:                                  @global-color;
 @button-hover-color:                            @global-color;
 @button-active-color:                           @global-color;
@@ -29,6 +30,13 @@
 @button-primary-color:                          @global-contrast-color;
 @button-primary-hover-color:                    @global-contrast-color;
 @button-primary-active-color:                   @global-contrast-color;
+
+@button-secondary-background:                   @global-secondary-background;
+@button-secondary-color:                        @global-contrast-color;
+@button-secondary-hover-background:             lighten(@button-secondary-background, 10%);
+@button-secondary-hover-color:                  @global-contrast-color;
+@button-secondary-active-color:                 @global-contrast-color;
+@button-secondary-active-background:            lighten(@button-secondary-background, 10%);
 
 @button-success-background:                     @global-success-background;
 @button-success-color:                          @global-contrast-color;
@@ -109,4 +117,29 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-button-misc() {}
+.hook-button-misc() {
+
+
+	/*
+	 * Modifier: `uk-button-secondary`
+	 */
+
+	.uk-button-secondary {
+	    background-color: @button-secondary-background;
+	    color: @button-secondary-color;
+	}
+
+	/* Hover */
+	.uk-button-secondary:hover,
+	.uk-button-secondary:focus {
+	    background-color: @button-secondary-hover-background;
+	    color: @button-secondary-hover-color;
+	}
+
+	/* Active */
+	.uk-button-secondary:active,
+	.uk-button-secondary.uk-active {
+	    background-color: @button-secondary-active-background;
+	    color: @button-secondary-active-color;
+	}
+}

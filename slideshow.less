@@ -20,6 +20,7 @@
 	// ---------- LAYOUT ----------
 		li{
 			height:70vh;
+			min-height: 430px;
 		}
 		&-cta{
 			position: absolute;
@@ -27,16 +28,14 @@
 			left:0;
 			width:100%;
 		}
-		button{
+		.uk-button{
 			border:3px solid;
 			@media (min-width: @breakpoint-medium) {
-
 			}
+
 			@media (min-width: @breakpoint-large) {
-				
-				min-height:66px;
 				width: 29vw;
-				height: 5vh;
+				line-height: 50px;
 			}
 		}
 		&-content{
@@ -52,28 +51,29 @@
 	// ---------- TYPO ----------
 		h2{
 			text-transform: uppercase;
-			font-family: "ProximaBoldIt", Helvetica, Arial, sans-serif;
-			font-style: italic;
+			font-family: "ProximaNovaBoldIt", Helvetica, Arial, sans-serif;
 		}
 		p{
-			font-family: "ProximaLightIt", Helvetica, Arial, sans-serif;
-			font-style: italic;
+			font-family: "ProximaNovaLightIt", Helvetica, Arial, sans-serif;
+			em{
+				font-style: normal;
+		        font-weight: normal;
+			}
 		}
 		.phone{
-			font-family: "ProximaLight", Helvetica, Arial, sans-serif;
+			font-family: "ProximaNovaLight", Helvetica, Arial, sans-serif;
 			font-style: normal;
 			font-size: 2em;
 		}
-		button{
+		.uk-button{
 			text-transform: uppercase;
 		}
 		@media (min-width: @breakpoint-medium) {
 			h2{
 				font-size:4vh;
-				line-height: 7vh;
+				line-height: 4vh;
 			}
 			p{
-
 				font-size: 3vh;
 				line-height: 4vh;
 			}
@@ -81,16 +81,28 @@
 				font-size: 6vh;
 				line-height: 7vh;
 			}
-			button{
-				font-size: 2vh;
+			.uk-button{
+				font-size: 3vh;
 			}
 			@media (max-aspect-ratio: 1/1){
 				h2{
-					font-size:5vh;
+					font-size:3vh;
+					line-height:2 vh;
+				}
+				p{
+					font-size: 2.5vh;
+					line-height: 4vh;
+				}
+				.phone{
+					font-size: 6vh;
 					line-height: 7vh;
+				}
+				.uk-button{
+					font-size: 2.5vh;
 				}
 			}
 		}	
+
 		@media (min-width: @breakpoint-large) {
 			h2{
 				font-size:6vh;
@@ -98,24 +110,44 @@
 			}
 			p{
 
-				font-size: 3vh;
-				line-height: 4vh;
+					font-size: 2.5vh;
+					line-height: 4vh;
 			}
 			.phone{
 				font-size: 6vh;
 				line-height: 7vh;
 			}
-			button{
-				font-size: 2vh;
+			.uk-button{
+				font-size: 2.5vh;
 			}
 		}	
+		@media (min-width: @breakpoint-xlarge) {
+			h2{
+				font-size: 7vh;
+				line-height: 7vh;
+			}
+			p{
+					font-size: 4vh;
+					line-height: 5vh;
+					&.tm-line-height-smaller{
+						line-height: 4vh;
+					}
+			}
+			.phone{
+				font-size: 6vh;
+				line-height: 7vh;
+			}
+			.uk-button{
+				font-size: 28px;
+			}
+		}
 
 	// ---------- STYLE ----------
 		color:@global-contrast-color;
 		h2,p{
 			color:@global-contrast-color;
 		}
-		button{
+		.uk-button{
 			background:none;
 			border-color:@global-hilight-color;
 			&:hover{

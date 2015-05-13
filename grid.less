@@ -7,8 +7,6 @@
 // Variables
 // ========================================================================
 
-@global-grid-gutter-large:						12px;
-
 @grid-gutter-horizontal:                        @global-grid-gutter;
 @grid-gutter-vertical:                          @global-grid-gutter;
 
@@ -21,4 +19,11 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-grid-misc() {}
+/* XL Gutter for large screen */
+.hook-grid-misc() {
+	@media (min-width: @breakpoint-xlarge) {
+	    /* Horizontal */
+	    .uk-grid.uk-grid-xlarge { margin-left: -@global-grid-gutter-xlarge; }
+	    .uk-grid.uk-grid-xlarge > * { padding-left:  @global-grid-gutter-xlarge; }
+	}
+}
