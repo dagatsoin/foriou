@@ -119,6 +119,31 @@
 
 .hook-button-misc() {
 
+	/*
+	 * Modifier: `uk-button-primary`
+	 */
+	// ---------- LAYOUT ----------
+	.uk-button-formtype{
+		border-width:2px;
+	}
+	// ---------- TYPO ----------
+	.uk-button-formtype{
+		font-size: @base-h4-font-size;
+		line-height: 50px;
+		&-active,
+		&:focus{
+			color:@global-contrast-color;
+		}
+	}
+	// ---------- STYLE ----------
+	.uk-button-formtype{
+		border-style: solid;
+		background:none;
+		&-active,
+		&:focus{
+			background: @global-color;
+		}
+	}
 
 	/*
 	 * Modifier: `uk-button-secondary`
